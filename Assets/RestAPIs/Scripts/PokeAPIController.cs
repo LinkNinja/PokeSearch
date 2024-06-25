@@ -97,16 +97,22 @@ public class PokeAPIController : MonoBehaviour
 
         string pokeSpriteURL = pokeInfo["sprites"]["front_default"];
 
-        //we have to loop through this information in the parsed data, because the pokemon may have more than one type.
+        
+        //Set to root node
         JSONNode pokeTypes = pokeInfo["types"];
+        //Create a single or Double element String Array. Assign new string array of size Poketypes.Count. We dont know
+        //If there will be one or two types.
         string[] pokeTypeNames = new string[pokeTypes.Count];
 
+        //Start i at 0. Start j at the end. Loop while I is less then the 
         for (int i = 0, j = pokeTypes.Count - 1; i < pokeTypes.Count; i++, j--)
         {
             pokeTypeNames[j] = pokeTypes[i]["type"]["name"];
         }
 
         JSONNode pokeStats = pokeInfo["stats"];
+        //Initialize a new string array. We dont know how large the array is yet, so we have to check.
+        // Set the new string array size to .COUNT. The new string will assign the amount of values in the array.
         string[] pokeStatNames = new string[pokeStats.Count];
         
 
