@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PokeAPIDemo.unity
+    guid: 751f595770d956c4d90ecf8b4395ab1c
   m_configObjects: {}
